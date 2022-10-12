@@ -1,0 +1,20 @@
+type Summary {
+  id: Int!
+  depositAccounts: Int
+  loanAccounts: Int
+  depositSummary: DepositSummary
+  loanSummary: LoanSummary
+}
+
+type DepositSummary {
+  availableTotal: Float
+  openingLedgerTotal: Float
+}
+
+type LoanSummary {
+ principalBalanceTotal: Float
+}
+
+type Query {
+  summary: Summary
+}
