@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h5>Deposit Accounts: {{ summary.depositAccounts }}</h5>
-    <h5>LoanAccounts: {{ summary.loanAccounts }}</h5>
+    <h5>Loan Accounts: {{ summary.loanAccounts }}</h5>
     <div>
       <h5>Deposit Summary:</h5>
       <p>Total: {{ summary.depositSummary.availableTotal }}</p>
