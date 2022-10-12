@@ -1,4 +1,4 @@
-import App from './App.vue';
+import App from '../App.vue';
 import { userEvent, within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
@@ -22,7 +22,9 @@ AppWithData.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const Document = await canvas.getByTestId('app');
 
-  await expect(canvas.getByText('Deposit')).toBeInTheDocument();
-  await expect(canvas.getByText('Loan')).toBeInTheDocument();
-  await expect(canvas.getByText('Principal Balance')).toBeInTheDocument();
+  await expect(canvas.getByText('Deposit Accounts')).toBeInTheDocument();
+  await expect(canvas.getByText('Loan Accounts')).toBeInTheDocument();
+  await expect(canvas.getByText('Total')).toBeInTheDocument();
+  await expect(canvas.getByText('Opening Total')).toBeInTheDocument();
+  await expect(canvas.getByText('Principal Balance Total')).toBeInTheDocument();
 };
